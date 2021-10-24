@@ -1,0 +1,21 @@
+.header{
+  height: 70px;
+  border: var(--border);
+}
+.nav{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+  }
+  &__items{
+    margin-right: 30px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

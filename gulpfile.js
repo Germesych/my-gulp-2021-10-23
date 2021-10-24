@@ -1,5 +1,7 @@
 // Определяем переменную "preprocessor"
-let preprocessor = 'sass'; // Выбор препроцессора в проекте - sass или less
+// Выбор препроцессора в проекте - sass или less
+let preprocessor = 'sass';
+// let preprocessor = 'less';
 
 
 
@@ -53,7 +55,7 @@ function scripts() {
 
 
 function styles() {
-    return src('app/' + preprocessor + '/main.' + preprocessor + '') // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
+    return src('app/' + preprocessor + '/index.' + preprocessor + '') // Выбираем источник: "app/sass/index.sass" или "app/less/index.less"
         .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
         .pipe(concat('app.min.css')) // Конкатенируем в файл app.min.js
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
