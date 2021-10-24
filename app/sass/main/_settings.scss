@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -44,6 +45,7 @@ body {
   font-family: var(--ff-main);
   height: 100%;
   width: 100%;
+  min-width: 320px;
   line-height: 1.2;
   font-size: 100%;
   overflow-x: hidden;
@@ -61,6 +63,7 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  background: transparent;
 }
 
 button::-moz-focus-inner {
@@ -77,12 +80,11 @@ a:hover {
   text-decoration: none;
 }
 
-ul li {
-  list-style: none;
-}
 
 img {
   vertical-align: top;
+  width: 100%;
+  height: auto;
 }
 
 h1,
@@ -132,6 +134,10 @@ textarea {
   resize: none;
 }
 
+::placeholder{
+  color: var(--placeholder-color);
+}
+
 /* END Resets*/
 
 /* Одна строка */
@@ -178,10 +184,4 @@ textarea {
 
 .hidden {
   display: none !important;
-}
-
-.wrap {
-  max-width: 1406px;
-  padding: 0 20px;
-  margin: 0 auto;
 }
